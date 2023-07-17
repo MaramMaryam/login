@@ -1,0 +1,5 @@
+  :root, :host {
+    --fa-style-family-classic: 'Font Awesome 6 Free';
+    --fa-font-regular: normal 400 1em/1 'Font Awesome 6 Free'; }
+  body{font-family: inherit;}
+  

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <section class="flex items-center flex-col min-h-screen mt-24 w-full max-w-[460px] text-left m-auto">
+        <h2 class="text-[#0933DF] uppercase font-bold text-[28px]">
+            <!-- Login Title -->
+            MEMBERS LOGIN
+        </h2>
+        <p class="font-light mt-2">
+            <!-- Login Description -->
+            Access to all features. No credit card required.
+        </p>
+        <a href="#"
+            class="w-full h-[60px] bg-[#FBFBFB] border border[#E3E3E3] rounded-lg flex items-center justify-center my-8">
+            <!-- Google Icon (SVG or Image tag) -->
+            <svg class="google-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="40" height="40" viewBox="0 0 40 40">
+                <image id="g-logo" width="40" height="40"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAAGsklEQVR4Ae3cA3jsShgG4Gvbtu1js7aObdu2bdbudmvbtu1VtUg2ydw7x95mstnt5rZ5voflG80/fzL72L89bOsF94J7wWgb2dSgiAzpPHmwbfPK1qWzxDNsRdb6Ar2BgtF9hSbDRbYG4mk2beuXwm+Q89yV+TmAILgHptrb5DyPtg3LhBZjBCP+RovewNZlc2TOl8nGel0HA4LA4qPhkRSM6XcHoEYk86fIfT2AQqFzYIBjMncHofkoZBWNCM1GSq+cpdpadQIMKEoRzIeXIroEkW08TObpDAiiO8F4Tga85TBnoEc8xVKZm9UNYECS0stnBCP/Ud+AnJH/SC+eAiShPTDZ3CRZPIN9CUokC6ZSYqE2wHhmKhw/2TegR2RnSFSUaRaMJccLxg7QsAQhktkTAACaAmOxkbA80h2taKIZKWzR1BFWRAQLRvXhphYdDEtcWDxxU4sOhjdDkdVYbmrRwYAgJIums3RTNWrftbHz/AmZh5MiLBAGVqOdZ4+1790inmrFvpYZuPPEATWdknmT5f7eZEN9V2N7o9zPu3XNInQte2BlcYE6tVTbltXw4kf9h5QlhW3rliBr1QcDAODsjPFlhmelqfNvKQty4S9B0KoPVgTxmWk7Tx0COMZCF6GzA3ZC0LWMwJSsTWiOXj+O6iP382KzowAAvMOhaxmAqw/Ijr4tGPsHgnbsACwxlpNNPABIIv5LIvxpzOVlkdXPNMGK8CCudi2pFi+ovRFlwLOtc7/uUgvnxhxu05LpIyD17nTu+EAw8q9HaVtXzgcAcBUMcAER/sx9YBj5pdeExr897NLtT9TVcLgRTzVcgbyHBuc9L5n8PdLJzAEwmWP1KDCMMvTp9jWf3tbC1gdQKDgMBhRBRL0GYaojO35zxOo8fZjbz5ZAZz700Anm9pLI9g+yoY7bYKrJBWJoRpk8SJ0/fDoc13QuRuNdgMmydfTBZPkGdcDDd0q1EDkOVIKzTOiDKVGY7oPLmylVYCKlL30wIKW6D44tJlSCE76nC45+CwHXfWDfdKVKcMwHdMEJ33MC7JqEqwRHvEgXnDaYE+ArMayBB3ECDAennnVKn4tUDU74gS446k1OgB3i8Z41LHmkKHtW4eGfpRpctv5/VlomlxOsTR6kKQN1H1wnptiZHpYFv27pMbqus4kxOChbySzTz8loakfukhIkYKEBEBzw6SBXk79cLQ5lXv5XuxtJAaMDdA/v+JMydVs8irBnDvB+g9QbGeY1SUFg2gTn1JD0z+cdPIVaTbym0JemeQ6FzrtzJtdFm+DT4Rh9MD9DybxNmxL03mg3g/u0MP3cbWo6GrWjbZMBg/0Id6wqAcWwEX+F/10fVzPIe2jmRW3VTiP+VBjC4bU6KgMAID9qaQt9frl3P6hSndOaP7HrxdSYPQiH92QYhvAwTRH7KdSWBL9h5j4GeugkqDpWc1oZBqaelSGNwMWNJMLjUkHxBn//zwZeH3topr+7bWxDmia0AID17gok7aTTMrTnw1KsfZTPVMhAyj9uVl5lIexqcQLs4KFpYXjpSjQw3HwrIqCBQQ5mXsZInBWtoIOac1GOqrU4IsUJwOSllsmha5iZTf3npzXnqXka+1dFmzo4D9vZgQp2TsAZvrZUIC7729WSmRlmVfz+HGExKpUCVGJj1oSQlTd+SZ9Lm4bubqKvtTkmk+OAIRhu+zMu3jEwyqTQ1d7lofWdzV0VyWSxpPJkjpOB76z7fsPfjjOHHMhBb0QzAhMUMS18nRrgOzHkz96YdPR4toNTMT+gKjq4OtatNPBCvgfcp9PD1w/wsFP14y7WA4/zu9SudVWw8HKpUC4Zw5uOLmQ//c4fGrZL8iit+WEpvMmxAIZbtrCor7uNLpj/ubpk6N6Kh059M6tINl8Qh4UUHGa73wzjNGHQ4dj7wC6JOPtLACLqkvq4WeuE2cWi/+nLt0csOKnQ1CKP+IYMWELqgPnGiLVh6O7Go8GYZpfxpDbnwkaHjpj3JfLRV7Wgb01SARxIupc6wntyfGOG9pbikRQJmzvodRg7mRq2tkkm7IbFlhktBdaBS7SsPZx1haDIbltOSwGKXxl5px7UZGaEb8gXlerEgmmMxB2KfEciTKHRAsvbmPo0nVsST1BEdH3Kyrh9bJVlQ7wmbk05USSu0PUPPWjDOtxLg5bF7h7tM42B08x//o7U0/AmrCSV3PtYiwZpS3B13MHMS/DIz4rYaBO0VM93JpwbwaJtqNfEsbwZFgEL50VtgcJLBV6wK9aKtfd+cEkvuBfcC37k9h8VGR+csPdltgAAAABJRU5ErkJggg==">
+                </image>
+            </svg>
+            <span class="text-lg font-light ml-6">
+                <!-- Google Register Label -->
+                Sign in With Google
+            </span>
+        </a>
+        <div class="flex items-center w-full">
+            <div class="flex-grow border-t border-[#D4D4D4] mx-2"></div>
+            <span class="text-[#D4D4D4] mx-2 font-semibold">
+                <!-- OR Text -->
+                OR
+            </span>
+            <div class="flex-grow border-t border-gray-300 mx-2"></div>
+        </div>
+
+
+        <form id="basic_form" autocomplete="off" novalidate="novalidate" onsubmit="return go()" class="w-full">
+            <div class="control-wrapper" id="errors-container_custom-container"></div>
+            <div class="control-wrapper w-full grid gap-.5">
+                <label class="input-label mb-2" for="basic_email">Email</label>
+                <div class="input-wrapper bg-white items-center border border-alto-main rounded-[8px] h-[45px] mb-5">
+                    <input id="basic_email" class="input bg-transparent border-none w-full h-full p-2 outline-none"
+                        autocomplete="off" type="text" />
+                </div>
+            </div>
+
+            <div class="control-wrapper w-full grid gap-.5">
+                <label class="input-label mb-2" for="basic_password">Password</label>
+                <div class="input-wrapper bg-white items-center border border-alto-main rounded-[8px] h-[45px] mb-5">
+                    <input id="basic_password" class="input bg-transparent border-none w-full h-full p-2 outline-none"
+                        autocomplete="off" type="text" />
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between my-4 mt-16">
+                <div class="flex items-center">
+                    <div class="flex items-center mr-4">
+                        <input checked id="login-checkbox" type="checkbox" value=""
+                            class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 rounded-lg ">
+                        <label for="login-checkbox" class="ml-3 text-[16px] font-normal">
+                            Remember me
+                        </label>
+                    </div>
+                </div>
+
+                <a href="/" class="text-[#3F8BEE]">
+                    Forget password
+                </a>
+            </div>
+            <div class="control-wrapper">
+                <button class="h-[60px] w-full bg-[#0933DF] hover:opacity-80 mt-8 text-white uppercase rounded-lg"
+                    type="submit">
+                    <!-- Login Label -->
+                    Login
+                </button>
+            </div>
+
+            <p class="my-8 font-light text-center">
+                <!-- Have Account Text -->
+                Don't have an account?
+                <a href="/register/create" class="text-[#3F8BEE] font-normal">
+                    <!-- Create Account Label -->
+                    Create Account
+                </a>
+            </p>
+            </div>
+        </form>
+    </section>
+</body>
+
+<script>
+    const validator = new JustValidate('#basic_form', { validateBeforeSubmitting: true, });
+    validator
+        .addField('#basic_email', [
+            {
+                rule: 'required',
+            },
+            {
+                rule: 'email',
+            },
+        ])
+        .addField('#basic_password', [
+            {
+                rule: 'required',
+            },
+            {
+                rule: 'password',
+            },
+        ]);
+
+
+</script>
+<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
+</html>
